@@ -10,6 +10,7 @@
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -90,6 +91,11 @@
     //to avoid flickering w slow connection
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
+    
+    cell.posterView.clipsToBounds = YES;
+    cell.posterView.layer.borderWidth = 3.0;
+    cell.posterView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
     return cell;
 }
 

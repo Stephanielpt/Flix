@@ -8,6 +8,8 @@
 
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import <QuartzCore/QuartzCore.h>
+
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
@@ -29,6 +31,9 @@
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     [self.posterView setImageWithURL:posterURL];
     
+    self.posterView.clipsToBounds = YES;
+    self.posterView.layer.borderWidth = 3.0;
+    self.posterView.layer.borderColor = [UIColor whiteColor].CGColor;
     
     NSString *backdropURLString = self.movie[@"poster_path"];
     NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
