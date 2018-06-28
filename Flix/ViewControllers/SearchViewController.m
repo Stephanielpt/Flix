@@ -52,9 +52,9 @@
             // TODO: Store the movies in a property to use elsewhere
             // TODO: Reload your table view data
             [self.activityIndicator stopAnimating];
-            [self.tableView reloadData];
+            [self.searchTableView reloadData];
         }
-        [self.refreshControl endRefreshing];
+        
     }];
     
     [task resume];
