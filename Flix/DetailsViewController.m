@@ -45,6 +45,7 @@
     self.synopsisLabel.text = self.movie[@"overview"];
     
     [self.titleLabel sizeToFit];
+    self.synopsisLabel.numberOfLines = 0;
     [self.synopsisLabel sizeToFit];
 
 }
