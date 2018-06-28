@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.activityIndicator startAnimating];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     // Do any additional setup after loading the view.
@@ -61,6 +63,7 @@
             // TODO: Reload your table view data
             [self.collectionView reloadData];
         }
+        [self.activityIndicator startAnimating];
         [self.refreshControl endRefreshing];
     }];
     [task resume];
