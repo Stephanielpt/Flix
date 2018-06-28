@@ -83,13 +83,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//THIS IS KINDA HACKY!!!
-- (IBAction)onTap:(id)sender {
-    [self fetchMovies];
-    [self.searchTableView reloadData];
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.view endEditing:YES];
 }
+//THIS IS KINDA HACKY!!!
+//- (IBAction)onTap:(id)sender {
+//    [self fetchMovies];
+//    [self.searchTableView reloadData];
+//    
+//}
 
 #pragma mark - Table view data source
 
@@ -107,13 +109,20 @@
     
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
-    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
-    
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-    
-    //to avoid flickering w slow connection
-    cell.searchPosterView.image = nil;
-    [cell.searchPosterView setImageWithURL:posterURL];
+    if(posterURLString == (NSString*)[NSNull null])
+    {
+        cell.searchPosterView.image = nil;
+    }
+    else
+    {
+        NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+        
+        NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+        
+        //to avoid flickering w slow connection
+        cell.searchPosterView.image = nil;
+        [cell.searchPosterView setImageWithURL:posterURL];
+    }
  
     return cell;
 }
