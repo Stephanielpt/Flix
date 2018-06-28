@@ -37,6 +37,8 @@
     NSString *baseSearchURL = @"https://api.themoviedb.org/3/search/movie?api_key=60e1d3f9485ce67b2f7c2f12b424a95d&language=en-US&query=";
     //NSString *queryURL = @"search bar value";
     NSString *queryURL = _movieSearchBar.text;
+    NSLog(@"The query text is: ");
+    NSLog(@"%@", _movieSearchBar.text);
 
     NSString *halfwayURL = [baseSearchURL stringByAppendingString:queryURL];
     NSString *fullURL = [halfwayURL stringByAppendingString:@"&page=1&include_adult=false"];
@@ -68,13 +70,23 @@
     [task resume];
 }
 
+// THIS MIGHT NOT BE VALID!!!
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    [self fetchMovies];
+    [self.searchTableView reloadData];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+//THIS IS KINDA HACKY!!!
 - (IBAction)onTap:(id)sender {
+    [self fetchMovies];
+    [self.searchTableView reloadData];
     [self.view endEditing:YES];
 }
 
