@@ -166,6 +166,7 @@
     DetailsViewController *detailsViewController = [segue destinationViewController];
     detailsViewController.movie = movie;
     
+    [self.searchTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
