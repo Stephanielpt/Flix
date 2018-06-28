@@ -6,6 +6,8 @@
 //
 
 #import "SearchViewController.h"
+#import "SearchCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *movies;
@@ -21,12 +23,43 @@
     [self.activityIndicator startAnimating];
     self.searchTableView.dataSource = self;
     self.searchTableView.delegate = self;
+    
+    [self fetchMovies];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (void)fetchMovies {
+    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+        else {
+            NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            
+            NSLog(@"%@", dataDictionary);
+            // TODO: Get the array of movies // wants to store results in an array of movies
+            self.movies =  dataDictionary[@"results"];
+            for (NSDictionary *movie in self.movies) {
+                NSLog(@"%@", movie[@"title"]);
+            }
+            // TODO: Store the movies in a property to use elsewhere
+            // TODO: Reload your table view data
+            [self.activityIndicator stopAnimating];
+            [self.tableView reloadData];
+        }
+        [self.refreshControl endRefreshing];
+    }];
+    
+    [task resume];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,18 +69,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return self.movies.count;
 }
 
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-// 
-//     //Configure the cell...
-// 
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
+    
+    NSDictionary *movie = self.movies[indexPath.row];
+    
+    //Configure the cell...
+    cell.searchLabel.text = movie[@"title"];
+    
+    NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
+    NSString *posterURLString = movie[@"poster_path"];
+    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+    
+    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+    
+    //to avoid flickering w slow connection
+    cell.searchPosterView.image = nil;
+    [cell.searchPosterView setImageWithURL:posterURL];
+ 
+    return cell;
+}
 
 
 /*
