@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -43,6 +44,7 @@
     
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
+    self.dateLabel.text = self.movie[@"release_date"];
     
     [self.titleLabel sizeToFit];
     self.synopsisLabel.numberOfLines = 0;

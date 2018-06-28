@@ -121,6 +121,13 @@
                                             <constraint firstAttribute="width" constant="140" id="i3p-uF-oSh"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jz-I0-JfN">
+                                        <rect key="frame" x="156" y="246" width="211" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -151,6 +158,7 @@
                     </view>
                     <connections>
                         <outlet property="backdropView" destination="Ufo-KK-rBG" id="Ttt-Jh-Z8b"/>
+                        <outlet property="dateLabel" destination="3jz-I0-JfN" id="HqW-Ye-yg2"/>
                         <outlet property="posterView" destination="BL9-sZ-n0i" id="eg5-pR-Kwz"/>
                         <outlet property="synopsisLabel" destination="HEg-dx-vFk" id="o4V-HK-MP7"/>
                         <outlet property="titleLabel" destination="90D-va-x9k" id="z2f-o1-bLI"/>
