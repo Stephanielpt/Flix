@@ -13,6 +13,7 @@
 		9043CF3120E4624B00785180 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3020E4624B00785180 /* DetailsViewController.m */; };
 		9043CF3420E4866700785180 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3320E4866700785180 /* MoviesGridViewController.m */; };
 		9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3620E488E300785180 /* MovieCollectionCell.m */; };
+		90CE848420E5556900B0BDDE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848320E5556900B0BDDE /* SearchViewController.m */; };
 		90F2D19720E409AA0083C495 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D19620E409AA0083C495 /* AppDelegate.m */; };
 		90F2D19D20E409AA0083C495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19B20E409AA0083C495 /* Main.storyboard */; };
 		90F2D19F20E409AB0083C495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19E20E409AB0083C495 /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		9043CF3320E4866700785180 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		9043CF3520E488E300785180 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		9043CF3620E488E300785180 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		90CE848220E5556900B0BDDE /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.h; sourceTree = "<absolute>"; };
+		90CE848320E5556900B0BDDE /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.m; sourceTree = "<absolute>"; };
 		90F2D19220E409AA0083C495 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2D19520E409AA0083C495 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90F2D19620E409AA0083C495 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,12 +162,8 @@
 				90F2D19520E409AA0083C495 /* AppDelegate.h */,
 				90F2D19620E409AA0083C495 /* AppDelegate.m */,
 				90F2D19B20E409AA0083C495 /* Main.storyboard */,
-				9043CF3220E4866700785180 /* MoviesGridViewController.h */,
-				9043CF3320E4866700785180 /* MoviesGridViewController.m */,
 				9043CF3520E488E300785180 /* MovieCollectionCell.h */,
 				9043CF3620E488E300785180 /* MovieCollectionCell.m */,
-				9043CF2F20E4624B00785180 /* DetailsViewController.h */,
-				9043CF3020E4624B00785180 /* DetailsViewController.m */,
 				9043CF2C20E4564B00785180 /* MovieCell.h */,
 				9043CF2D20E4564B00785180 /* MovieCell.m */,
 				90F2D19E20E409AB0083C495 /* Assets.xcassets */,
@@ -198,6 +197,12 @@
 			children = (
 				90F2D1C720E413160083C495 /* MoviesViewController.h */,
 				90F2D1C820E413160083C495 /* MoviesViewController.m */,
+				9043CF3220E4866700785180 /* MoviesGridViewController.h */,
+				9043CF3320E4866700785180 /* MoviesGridViewController.m */,
+				9043CF2F20E4624B00785180 /* DetailsViewController.h */,
+				9043CF3020E4624B00785180 /* DetailsViewController.m */,
+				90CE848220E5556900B0BDDE /* SearchViewController.h */,
+				90CE848320E5556900B0BDDE /* SearchViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */,
 				9043CF2E20E4564B00785180 /* MovieCell.m in Sources */,
 				90F2D1C920E413160083C495 /* MoviesViewController.m in Sources */,
+				90CE848420E5556900B0BDDE /* SearchViewController.m in Sources */,
 				9043CF3420E4866700785180 /* MoviesGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
