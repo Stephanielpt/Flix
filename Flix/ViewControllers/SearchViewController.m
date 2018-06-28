@@ -8,8 +8,9 @@
 #import "SearchViewController.h"
 #import "SearchCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailsViewController.h"
 
-@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -24,6 +25,7 @@
     [self.activityIndicator startAnimating];
     self.searchTableView.dataSource = self;
     self.searchTableView.delegate = self;
+    self.movieSearchBar.delegate = self;
     
     [self fetchMovies];
     // Uncomment the following line to preserve selection between presentations.
@@ -70,9 +72,8 @@
     [task resume];
 }
 
-// THIS MIGHT NOT BE VALID!!!
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    
     [self fetchMovies];
     [self.searchTableView reloadData];
     
@@ -91,6 +92,17 @@
 }
 
 #pragma mark - Table view data source
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.searchTableView indexPathForCell:tappedCell];
+    NSDictionary *movie = self.movies[indexPath.row];
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.movie = movie;
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.movies.count;
