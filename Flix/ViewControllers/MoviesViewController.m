@@ -34,7 +34,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:(UIControlEventValueChanged)];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
-    [self.activityIndicator stopAnimating];
+    
 }
 
     
@@ -57,10 +57,12 @@
             }
             // TODO: Store the movies in a property to use elsewhere
             // TODO: Reload your table view data
+            [self.activityIndicator stopAnimating];
             [self.tableView reloadData];
         }
         [self.refreshControl endRefreshing];
     }];
+    
     [task resume];
 }
 
