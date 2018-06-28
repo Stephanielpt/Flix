@@ -36,7 +36,7 @@
     self.posterView.layer.borderWidth = 3.0;
     self.posterView.layer.borderColor = [UIColor whiteColor].CGColor;
     
-    NSString *backdropURLString = self.movie[@"poster_path"];
+    NSString *backdropURLString = self.movie[@"backdrop_path"];
     NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
     
     NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
