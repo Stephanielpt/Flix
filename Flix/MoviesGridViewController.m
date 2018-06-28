@@ -14,6 +14,7 @@
 @interface MoviesGridViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -25,7 +26,9 @@
     self.collectionView.delegate = self;
     // Do any additional setup after loading the view.
     [self fetchMovies];
-    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:(UIControlEventValueChanged)];
+    [self.collectionView insertSubview:self.refreshControl atIndex:0];
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
     
     layout.minimumInteritemSpacing = 5;
@@ -56,10 +59,9 @@
 //            }
             // TODO: Store the movies in a property to use elsewhere
             // TODO: Reload your table view data
-            //[self.tableView reloadData];
             [self.collectionView reloadData];
         }
-        //[self.refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
     }];
     [task resume];
 }
