@@ -76,7 +76,7 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self fetchMovies];
     [self.searchTableView reloadData];
-    
+    //[self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,17 +92,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    UITableViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.searchTableView indexPathForCell:tappedCell];
-    NSDictionary *movie = self.movies[indexPath.row];
-    DetailsViewController *detailsViewController = [segue destinationViewController];
-    detailsViewController.movie = movie;
-    
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.movies.count;
@@ -164,14 +153,20 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    SearchCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.searchTableView indexPathForCell:tappedCell];
+    NSDictionary *movie = self.movies[indexPath.row];
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.movie = movie;
+    
 }
-*/
+
 
 @end
