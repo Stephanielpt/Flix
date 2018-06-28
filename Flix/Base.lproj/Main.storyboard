@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq4-11-C2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188.5" y="1850.5"/>
+            <point key="canvasLocation" x="673" y="2446"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t9k-Vp-52T">
@@ -167,6 +167,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="KO3-6W-TLI" kind="relationship" relationship="rootViewController" id="HPl-jp-U72"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKB-dV-u4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,10 +208,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xNr-w0-I8l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJn-gp-EH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685.625" y="976.04333333333329"/>
+            <point key="canvasLocation" x="673" y="976"/>
         </scene>
         <!--Movies-->
         <scene sceneID="tKA-Vi-dWE">
