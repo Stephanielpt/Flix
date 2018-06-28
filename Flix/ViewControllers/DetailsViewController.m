@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -49,7 +50,10 @@
     [self.titleLabel sizeToFit];
     self.synopsisLabel.numberOfLines = 0;
     [self.synopsisLabel sizeToFit];
-
+    
+    CGFloat maxHeight = self.synopsisLabel.frame.origin.y + self.synopsisLabel.frame.size.height;
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
 }
 
 - (void)didReceiveMemoryWarning {

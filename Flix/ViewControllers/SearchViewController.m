@@ -178,5 +178,4 @@
     [self.searchTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
 @end

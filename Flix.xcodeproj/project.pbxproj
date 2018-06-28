@@ -15,6 +15,8 @@
 		9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3620E488E300785180 /* MovieCollectionCell.m */; };
 		90CE848420E5556900B0BDDE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848320E5556900B0BDDE /* SearchViewController.m */; };
 		90CE848720E55C0400B0BDDE /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848620E55C0400B0BDDE /* SearchCell.m */; };
+		90CE848920E58F3800B0BDDE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CE848820E58F3800B0BDDE /* WebKit.framework */; };
+		90CE848C20E5906800B0BDDE /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848B20E5906800B0BDDE /* TrailerViewController.m */; };
 		90F2D19720E409AA0083C495 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D19620E409AA0083C495 /* AppDelegate.m */; };
 		90F2D19D20E409AA0083C495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19B20E409AA0083C495 /* Main.storyboard */; };
 		90F2D19F20E409AB0083C495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19E20E409AB0083C495 /* Assets.xcassets */; };
@@ -61,6 +63,9 @@
 		90CE848320E5556900B0BDDE /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.m; sourceTree = "<absolute>"; };
 		90CE848520E55C0400B0BDDE /* SearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		90CE848620E55C0400B0BDDE /* SearchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		90CE848820E58F3800B0BDDE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		90CE848A20E5906800B0BDDE /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		90CE848B20E5906800B0BDDE /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
 		90F2D19220E409AA0083C495 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2D19520E409AA0083C495 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90F2D19620E409AA0083C495 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CE848920E58F3800B0BDDE /* WebKit.framework in Frameworks */,
 				2FF0456913D1E65FA2B2CB11 /* libPods-Flix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +120,7 @@
 		236D9CBD6B0BD5D66957B5A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90CE848820E58F3800B0BDDE /* WebKit.framework */,
 				D513F4F32BC69123E3454544 /* libPods-Flix.a */,
 				7717584F60F6A2BDBCE87148 /* libPods-FlixTests.a */,
 				A42E1CF18BAB74171735FAC6 /* libPods-FlixUITests.a */,
@@ -208,6 +215,8 @@
 				9043CF3020E4624B00785180 /* DetailsViewController.m */,
 				90CE848220E5556900B0BDDE /* SearchViewController.h */,
 				90CE848320E5556900B0BDDE /* SearchViewController.m */,
+				90CE848A20E5906800B0BDDE /* TrailerViewController.h */,
+				90CE848B20E5906800B0BDDE /* TrailerViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 			files = (
 				90F2D1A520E409AB0083C495 /* main.m in Sources */,
 				9043CF3120E4624B00785180 /* DetailsViewController.m in Sources */,
+				90CE848C20E5906800B0BDDE /* TrailerViewController.m in Sources */,
 				90F2D19720E409AA0083C495 /* AppDelegate.m in Sources */,
 				90CE848720E55C0400B0BDDE /* SearchCell.m in Sources */,
 				9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */,
