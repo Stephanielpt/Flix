@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="CDs-qk-ByE" customClass="MovieCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="CDs-qk-ByE" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDs-qk-ByE" id="508-Ig-JNU">
@@ -52,6 +53,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="posterView" destination="2hd-bO-EVf" id="gWp-oW-OrH"/>
                                             <outlet property="synopsisLabel" destination="Cp7-RJ-Bt3" id="PYX-88-ioZ"/>
@@ -82,37 +84,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtd-mY-uvB">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtd-mY-uvB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-KK-rBG">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-KK-rBG">
                                         <rect key="frame" x="0.0" y="-64" width="375" height="262"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="262" id="Y3f-MM-bPg"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90D-va-x9k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90D-va-x9k">
                                         <rect key="frame" x="156" y="206" width="219" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEg-dx-vFk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEg-dx-vFk">
                                         <rect key="frame" x="8" y="314" width="359" height="281"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="281" id="0xY-Lt-fwV"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-sZ-n0i">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-sZ-n0i">
                                         <rect key="frame" x="8" y="106" width="140" height="183"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="183" id="gjf-av-RhX"/>
+                                            <constraint firstAttribute="width" constant="140" id="i3p-uF-oSh"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ufo-KK-rBG" secondAttribute="trailing" id="1GI-0V-lja"/>
+                                    <constraint firstItem="HEg-dx-vFk" firstAttribute="top" secondItem="BL9-sZ-n0i" secondAttribute="bottom" constant="25" id="58K-aL-RxX"/>
+                                    <constraint firstItem="BL9-sZ-n0i" firstAttribute="leading" secondItem="rtd-mY-uvB" secondAttribute="leadingMargin" id="Jx8-zI-4jc"/>
+                                    <constraint firstItem="Ufo-KK-rBG" firstAttribute="centerX" secondItem="HEg-dx-vFk" secondAttribute="centerX" id="YKX-fk-biW"/>
+                                    <constraint firstItem="Ufo-KK-rBG" firstAttribute="centerX" secondItem="rtd-mY-uvB" secondAttribute="centerX" id="i3n-aC-SRK"/>
+                                    <constraint firstItem="90D-va-x9k" firstAttribute="top" secondItem="Ufo-KK-rBG" secondAttribute="bottom" constant="8" symbolic="YES" id="j8i-vf-Gcq"/>
+                                    <constraint firstItem="Ufo-KK-rBG" firstAttribute="leading" secondItem="rtd-mY-uvB" secondAttribute="leading" id="rS2-H6-umQ"/>
+                                    <constraint firstItem="HEg-dx-vFk" firstAttribute="top" secondItem="90D-va-x9k" secondAttribute="bottom" constant="70" id="tYh-ZT-6Ms"/>
+                                    <constraint firstItem="BL9-sZ-n0i" firstAttribute="leading" secondItem="HEg-dx-vFk" secondAttribute="leading" id="v2r-8g-o9Q"/>
+                                    <constraint firstItem="90D-va-x9k" firstAttribute="leading" secondItem="BL9-sZ-n0i" secondAttribute="trailing" constant="8" symbolic="YES" id="w2F-le-FOq"/>
+                                    <constraint firstItem="Ufo-KK-rBG" firstAttribute="trailing" secondItem="90D-va-x9k" secondAttribute="trailing" id="wlZ-Ya-bVr"/>
+                                    <constraint firstItem="Ufo-KK-rBG" firstAttribute="top" secondItem="rtd-mY-uvB" secondAttribute="top" id="xrk-3l-VlX"/>
+                                    <constraint firstAttribute="bottom" secondItem="HEg-dx-vFk" secondAttribute="bottom" constant="8" id="zH2-cP-ny1"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rtd-mY-uvB" secondAttribute="trailing" id="1eO-Cf-ReK"/>
+                            <constraint firstItem="rtd-mY-uvB" firstAttribute="top" secondItem="Gcy-BV-dii" secondAttribute="top" id="2Sz-w6-T1y"/>
+                            <constraint firstAttribute="bottom" secondItem="rtd-mY-uvB" secondAttribute="bottom" id="Jc1-DO-WoG"/>
+                            <constraint firstItem="rtd-mY-uvB" firstAttribute="leading" secondItem="Gcy-BV-dii" secondAttribute="leading" id="mFm-5b-man"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B33-N6-4bt"/>
                     </view>
                     <connections>

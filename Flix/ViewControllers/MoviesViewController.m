@@ -110,7 +110,8 @@
     NSDictionary *movie = self.movies[indexPath.row];
     DetailsViewController *detailsViewController = [segue destinationViewController];
     detailsViewController.movie = movie;
-
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
