@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="302" y="878"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Movie Details-->
         <scene sceneID="lLF-aQ-bYu">
             <objects>
-                <viewController id="cUM-3w-SOE" customClass="DetailsViewController" sceneMemberID="viewController">
+                <viewController title="Movie Details" id="cUM-3w-SOE" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gcy-BV-dii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="1886" y="117"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Movies-->
         <scene sceneID="tKA-Vi-dWE">
             <objects>
                 <viewController id="JnX-aQ-TQy" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -193,6 +193,7 @@
                                         <color key="backgroundColor" red="0.74413916040000005" green="0.6808897652" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="posterView" destination="tUk-f9-8jM" id="itq-Ng-8cx"/>
+                                            <segue destination="cUM-3w-SOE" kind="show" id="idG-Hm-zbQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -201,7 +202,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AMt-Hr-Ot2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ogz-ek-48s"/>
+                    <navigationItem key="navigationItem" title="Movies" id="ogz-ek-48s"/>
                     <connections>
                         <outlet property="collectionView" destination="cLM-Ve-idI" id="xGF-wW-dU5"/>
                     </connections>
@@ -230,4 +231,7 @@
             <point key="canvasLocation" x="303" y="118"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="idG-Hm-zbQ"/>
+    </inferredMetricsTieBreakers>
 </document>
