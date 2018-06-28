@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UISearchBar *movieSearchBar;
 
 @end
 
@@ -33,7 +34,14 @@
 }
 
 - (void)fetchMovies {
-    NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
+    NSString *baseSearchURL = @"https://api.themoviedb.org/3/search/movie?api_key=60e1d3f9485ce67b2f7c2f12b424a95d&language=en-US&query=";
+    //NSString *queryURL = @"search bar value";
+    NSString *queryURL = _movieSearchBar.text;
+
+    NSString *halfwayURL = [baseSearchURL stringByAppendingString:queryURL];
+    NSString *fullURL = [halfwayURL stringByAppendingString:@"&page=1&include_adult=false"];
+    
+    NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

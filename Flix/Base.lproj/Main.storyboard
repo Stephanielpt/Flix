@@ -237,7 +237,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="JTa-ae-T0K">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="JTa-ae-T0K">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,6 +248,7 @@
                     <navigationItem key="navigationItem" id="xNr-w0-I8l"/>
                     <connections>
                         <outlet property="activityIndicator" destination="JTa-ae-T0K" id="C5x-4h-iIt"/>
+                        <outlet property="movieSearchBar" destination="6go-GY-MHH" id="N24-aR-lFM"/>
                         <outlet property="searchTableView" destination="LL3-uD-Y2K" id="fH7-Xt-Sb5"/>
                     </connections>
                 </viewController>
