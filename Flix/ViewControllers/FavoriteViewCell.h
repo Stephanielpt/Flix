@@ -8,5 +8,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoriteViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *faveCell;
 
 @end

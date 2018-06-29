@@ -328,6 +328,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="faveCell" destination="gHH-OJ-Jth" id="ynp-Kw-wuH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -336,6 +339,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="YAd-XV-BFs"/>
                     <connections>
+                        <outlet property="favoriteTableView" destination="rfJ-qR-oVU" id="GaA-iJ-TaR"/>
                         <outlet property="tableView" destination="rfJ-qR-oVU" id="9HQ-ZY-wsc"/>
                     </connections>
                 </viewController>
