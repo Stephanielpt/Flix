@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TrailerViewController : UIViewController
+@property (nonatomic, strong) NSDictionary *movie;
 
 @end
