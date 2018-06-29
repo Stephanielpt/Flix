@@ -22,8 +22,12 @@
     // Do any additional setup after loading the view.
     self.favoriteTableView.dataSource = self;
     self.favoriteTableView.delegate = self;
+    
+    
+    //self.myArray = [@[] mutableCopy];
+    
+    self.myArray = [[NSMutableArray alloc] init];
     //NSLog(@"%@", self.myArray[0][@"original_title"]);
-    [self.favoriteTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -145,7 +145,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LCj-iY-Y4H">
-                                        <rect key="frame" x="259" y="288" width="96" height="20"/>
+                                        <rect key="frame" x="259" y="288" width="52" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -297,6 +297,7 @@
         <!--Favorites-->
         <scene sceneID="b4s-PV-eXc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44d-l4-dwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="DrP-XI-p3V" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="projector_tabbar_item" id="ygR-1i-ajl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2yc-GL-468">
@@ -307,7 +308,6 @@
                         <segue destination="wNH-03-WMg" kind="relationship" relationship="rootViewController" id="hga-M0-0zM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="44d-l4-dwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2404" y="137"/>
         </scene>
@@ -357,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ca-bX-RVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2403.5" y="1052.5"/>
+            <point key="canvasLocation" x="2275" y="1470"/>
         </scene>
         <!--Popular-->
         <scene sceneID="whq-h9-zZv">
@@ -531,7 +531,7 @@
         <image name="ticket_tabbar_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W7b-iB-7OP"/>
+        <segue reference="hga-M0-0zM"/>
         <segue reference="YeV-cQ-cgC"/>
     </inferredMetricsTieBreakers>
 </document>

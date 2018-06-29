@@ -10,4 +10,6 @@
 
 @interface FavoriteViewController : UIViewController
 @property (nonatomic, strong) NSMutableArray *myArray;
+
+
 @end
