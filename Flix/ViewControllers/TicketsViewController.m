@@ -21,7 +21,7 @@
     [super viewDidLoad];
     [self.activityIndicator startAnimating];
     // Do any additional setup after loading the view.
-    NSString *urlString = @"https://www.mobile.fandango.com/search?q=";
+    NSString *urlString = @"https://mobile.fandango.com/search?q=";
     NSString *movieName = self.movie[@"original_title"];
     
     if (movieName == nil) {
