@@ -13,13 +13,13 @@
 		9043CF3120E4624B00785180 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3020E4624B00785180 /* DetailsViewController.m */; };
 		9043CF3420E4866700785180 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3320E4866700785180 /* MoviesGridViewController.m */; };
 		9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9043CF3620E488E300785180 /* MovieCollectionCell.m */; };
-		90CE848420E5556900B0BDDE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848320E5556900B0BDDE /* SearchViewController.m */; };
+		90C8EA7F20E6E3A000EBB929 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C8EA7C20E6E3A000EBB929 /* SearchViewController.m */; };
+		90C8EA8020E6E3A000EBB929 /* FavoriteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C8EA7E20E6E3A000EBB929 /* FavoriteViewCell.m */; };
 		90CE848720E55C0400B0BDDE /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848620E55C0400B0BDDE /* SearchCell.m */; };
 		90CE848920E58F3800B0BDDE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CE848820E58F3800B0BDDE /* WebKit.framework */; };
 		90CE848C20E5906800B0BDDE /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848B20E5906800B0BDDE /* TrailerViewController.m */; };
 		90CE848F20E5B07500B0BDDE /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE848E20E5B07500B0BDDE /* TicketsViewController.m */; };
 		90CE849220E5E21700B0BDDE /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE849120E5E21700B0BDDE /* FavoriteViewController.m */; };
-		90CE849520E5E2D600B0BDDE /* FavoriteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE849320E5E2D500B0BDDE /* FavoriteViewCell.m */; };
 		90F2D19720E409AA0083C495 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D19620E409AA0083C495 /* AppDelegate.m */; };
 		90F2D19D20E409AA0083C495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19B20E409AA0083C495 /* Main.storyboard */; };
 		90F2D19F20E409AB0083C495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D19E20E409AB0083C495 /* Assets.xcassets */; };
@@ -62,8 +62,10 @@
 		9043CF3320E4866700785180 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		9043CF3520E488E300785180 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		9043CF3620E488E300785180 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
-		90CE848220E5556900B0BDDE /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.h; sourceTree = "<absolute>"; };
-		90CE848320E5556900B0BDDE /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.m; sourceTree = "<absolute>"; };
+		90C8EA7B20E6E39F00EBB929 /* FavoriteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewCell.h; sourceTree = "<group>"; };
+		90C8EA7C20E6E3A000EBB929 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		90C8EA7D20E6E3A000EBB929 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		90C8EA7E20E6E3A000EBB929 /* FavoriteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewCell.m; sourceTree = "<group>"; };
 		90CE848520E55C0400B0BDDE /* SearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		90CE848620E55C0400B0BDDE /* SearchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		90CE848820E58F3800B0BDDE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -73,8 +75,6 @@
 		90CE848E20E5B07500B0BDDE /* TicketsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketsViewController.m; sourceTree = "<group>"; };
 		90CE849020E5E21700B0BDDE /* FavoriteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
 		90CE849120E5E21700B0BDDE /* FavoriteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
-		90CE849320E5E2D500B0BDDE /* FavoriteViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FavoriteViewCell.m; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/FavoriteViewCell.m; sourceTree = "<absolute>"; };
-		90CE849420E5E2D500B0BDDE /* FavoriteViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FavoriteViewCell.h; path = /Users/slampotang/Desktop/Flix/Flix/ViewControllers/FavoriteViewCell.h; sourceTree = "<absolute>"; };
 		90F2D19220E409AA0083C495 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2D19520E409AA0083C495 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90F2D19620E409AA0083C495 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -216,8 +216,10 @@
 		90F2D1CA20E4138F0083C495 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				90CE849420E5E2D500B0BDDE /* FavoriteViewCell.h */,
-				90CE849320E5E2D500B0BDDE /* FavoriteViewCell.m */,
+				90C8EA7B20E6E39F00EBB929 /* FavoriteViewCell.h */,
+				90C8EA7E20E6E3A000EBB929 /* FavoriteViewCell.m */,
+				90C8EA7D20E6E3A000EBB929 /* SearchViewController.h */,
+				90C8EA7C20E6E3A000EBB929 /* SearchViewController.m */,
 				90CE849020E5E21700B0BDDE /* FavoriteViewController.h */,
 				90CE849120E5E21700B0BDDE /* FavoriteViewController.m */,
 				90CE848D20E5B07500B0BDDE /* TicketsViewController.h */,
@@ -228,8 +230,6 @@
 				9043CF3320E4866700785180 /* MoviesGridViewController.m */,
 				9043CF2F20E4624B00785180 /* DetailsViewController.h */,
 				9043CF3020E4624B00785180 /* DetailsViewController.m */,
-				90CE848220E5556900B0BDDE /* SearchViewController.h */,
-				90CE848320E5556900B0BDDE /* SearchViewController.m */,
 				90CE848A20E5906800B0BDDE /* TrailerViewController.h */,
 				90CE848B20E5906800B0BDDE /* TrailerViewController.m */,
 			);
@@ -445,13 +445,13 @@
 				9043CF3120E4624B00785180 /* DetailsViewController.m in Sources */,
 				90CE848C20E5906800B0BDDE /* TrailerViewController.m in Sources */,
 				90F2D19720E409AA0083C495 /* AppDelegate.m in Sources */,
-				90CE849520E5E2D600B0BDDE /* FavoriteViewCell.m in Sources */,
+				90C8EA8020E6E3A000EBB929 /* FavoriteViewCell.m in Sources */,
 				90CE848720E55C0400B0BDDE /* SearchCell.m in Sources */,
 				90CE849220E5E21700B0BDDE /* FavoriteViewController.m in Sources */,
 				9043CF3720E488E300785180 /* MovieCollectionCell.m in Sources */,
 				9043CF2E20E4564B00785180 /* MovieCell.m in Sources */,
 				90F2D1C920E413160083C495 /* MoviesViewController.m in Sources */,
-				90CE848420E5556900B0BDDE /* SearchViewController.m in Sources */,
+				90C8EA7F20E6E3A000EBB929 /* SearchViewController.m in Sources */,
 				9043CF3420E4866700785180 /* MoviesGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

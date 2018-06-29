@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/slampotang/Desktop/Flix/Flix/ViewControllers/FavoriteViewCell.h">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/slampotang/Desktop/Flix/Flix/ViewControllers/FavoriteViewCell.m">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.h">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/slampotang/Desktop/Flix/Flix/ViewControllers/SearchViewController.m">
-   </FileRef>
-   <FileRef
       location = "group:Flix.xcodeproj">
    </FileRef>
    <FileRef

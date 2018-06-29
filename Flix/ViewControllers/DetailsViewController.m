@@ -72,17 +72,30 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
+//    if ([segue isKindOfClass:[FavoriteViewController class]]) {
+//    }
+    if([segue.identifier isEqualToString:(@"fave")])
+    {
+        FavoriteViewController *favoriteViewController = [segue destinationViewController];
+        //favoriteViewController.myArray = self.movie;
+        [favoriteViewController.myArray addObject:self.movie];
+    }
+    if([segue.identifier isEqualToString:(@"trailer")])
+    {
+        TrailerViewController *trailerViewController = [segue destinationViewController];
+        trailerViewController.movie = self.movie;
+    }
+    if([segue.identifier isEqualToString:(@"ticket")])
+    {
+        TicketsViewController *ticketsViewController = [segue destinationViewController];
+        ticketsViewController.movie = self.movie;
+    }
     
-    TrailerViewController *trailerViewController = [segue destinationViewController];
-    trailerViewController.movie = self.movie;
     
-    TicketsViewController *ticketsViewController = [segue destinationViewController];
-    ticketsViewController.movie = self.movie;
     
-    FavoriteViewController *favoriteViewController = [segue destinationViewController];
-    //favoriteViewController.myArray = self.movie;
-    [favoriteViewController.myArray addObject:self.movie];
+    
+    
+    
 }
 
 

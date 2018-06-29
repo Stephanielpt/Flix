@@ -22,6 +22,8 @@
     // Do any additional setup after loading the view.
     self.favoriteTableView.dataSource = self;
     self.favoriteTableView.delegate = self;
+    //NSLog(@"%@", self.myArray[0][@"original_title"]);
+    [self.favoriteTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +49,9 @@
     FavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavoriteViewCell"];
     if(indexPath.row < self.myArray.count)
     {
-        cell.faveCell.text = self.myArray[indexPath.row];
+        cell.faveLabel.text = self.myArray[indexPath.row][@"original_title"];
+        NSLog(@"amazing");
+        NSLog(@"%@", self.myArray[indexPath.row][@"original_title"]);
     }
     //    NSLog(@"%@", [NSString stringWithFormat: @"row: %d, section: %d", indexPath.row, indexPath.section]);
     

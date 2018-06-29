@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoriteViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *faveCell;
+@property (weak, nonatomic) IBOutlet UILabel *faveLabel;
 @property (strong, nonatomic) NSMutableArray *myFaves;
 
 @end

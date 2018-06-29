@@ -27,7 +27,7 @@
     if (movieName == nil) {
         return;
     }
-    NSString *urlString2 = [urlString stringByAppendingString:movieName];
+    NSString *urlString2 = [[urlString stringByAppendingString:movieName] stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
     // Convert the url String to a NSURL object.
     NSURL *url = [NSURL URLWithString:urlString2];
     
