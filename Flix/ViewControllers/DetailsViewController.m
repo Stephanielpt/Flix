@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "TrailerViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FavoriteViewController.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
@@ -79,6 +80,9 @@
     TicketsViewController *ticketsViewController = [segue destinationViewController];
     ticketsViewController.movie = self.movie;
     
+    FavoriteViewController *favoriteViewController = [segue destinationViewController];
+    //favoriteViewController.myArray = self.movie;
+    [favoriteViewController.myArray addObject:self.movie];
 }
 
 

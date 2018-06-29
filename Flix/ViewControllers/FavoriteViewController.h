@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoriteViewController : UIViewController
-@property (nonatomic, strong) NSArray *myArray;
+@property (nonatomic, strong) NSMutableArray *myArray;
 @end

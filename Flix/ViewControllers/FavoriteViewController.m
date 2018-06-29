@@ -10,7 +10,7 @@
 #import "FavoriteViewCell.h"
 
 @interface FavoriteViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSArray *faves;
+//@property (nonatomic, strong) NSArray *faves;
 @property (weak, nonatomic) IBOutlet UITableView *favoriteTableView;
 
 @end
@@ -40,13 +40,15 @@
 */
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.faves.count;
+    return self.myArray.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavoriteViewCell"];
-    
-    cell.faveCell.text = self.myArray[indexPath.row];
+    if(indexPath.row < self.myArray.count)
+    {
+        cell.faveCell.text = self.myArray[indexPath.row];
+    }
     //    NSLog(@"%@", [NSString stringWithFormat: @"row: %d, section: %d", indexPath.row, indexPath.section]);
     
 //    NSDictionary *movie = self.movies[indexPath.row];

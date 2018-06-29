@@ -9,5 +9,6 @@
 
 @interface FavoriteViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *faveCell;
+@property (strong, nonatomic) NSMutableArray *myFaves;
 
 @end

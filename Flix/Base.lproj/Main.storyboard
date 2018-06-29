@@ -138,12 +138,23 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3jz-I0-JfN">
-                                        <rect key="frame" x="160" y="261" width="211" height="25"/>
+                                        <rect key="frame" x="160" y="261" width="128" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LCj-iY-Y4H">
+                                        <rect key="frame" x="319" y="261" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wNH-03-WMg" kind="push" id="W7b-iB-7OP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </scrollView>
@@ -168,7 +179,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="672.5" y="2445.5"/>
+            <point key="canvasLocation" x="983" y="2444"/>
         </scene>
         <!--Trailer-->
         <scene sceneID="Jzg-L9-LhL">
@@ -208,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeX-gY-6Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.5" y="2443.5"/>
+            <point key="canvasLocation" x="2238" y="2444"/>
         </scene>
         <!--Tickets View Controller-->
         <scene sceneID="P5c-Ux-EPx">
@@ -243,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3F-IG-7S2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.5" y="3425.5"/>
+            <point key="canvasLocation" x="2238" y="3294"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t9k-Vp-52T">
@@ -340,7 +351,6 @@
                     <navigationItem key="navigationItem" title="Favorites" id="YAd-XV-BFs"/>
                     <connections>
                         <outlet property="favoriteTableView" destination="rfJ-qR-oVU" id="GaA-iJ-TaR"/>
-                        <outlet property="tableView" destination="rfJ-qR-oVU" id="9HQ-ZY-wsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ca-bX-RVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -533,6 +543,7 @@
         <image name="ticket_tabbar_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="W7b-iB-7OP"/>
         <segue reference="mZn-Zc-RrT"/>
     </inferredMetricsTieBreakers>
 </document>
