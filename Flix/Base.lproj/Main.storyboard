@@ -124,9 +124,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PIM-Js-mSk">
-                                        <rect key="frame" x="156" y="261" width="71" height="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PIM-Js-mSk" customClass="tick">
+                                        <rect key="frame" x="156" y="269" width="91" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Buy Tickets">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="1392.5" y="2443.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Tickets View Controller-->
         <scene sceneID="P5c-Ux-EPx">
             <objects>
-                <viewController id="KKB-mO-bt3" sceneMemberID="viewController">
+                <viewController id="KKB-mO-bt3" customClass="TicketsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akk-As-u8p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,10 +218,19 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" id="n61-AJ-hJ7">
+                                <rect key="frame" x="169" y="278" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="0yW-lo-Fah"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="n61-AJ-hJ7" id="6xR-cJ-xcR"/>
+                        <outlet property="webView" destination="sWB-7T-jBb" id="biq-JZ-8Wo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3F-IG-7S2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

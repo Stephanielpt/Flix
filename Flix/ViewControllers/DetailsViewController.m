@@ -7,6 +7,7 @@
 //
 
 #import "DetailsViewController.h"
+#import "TicketsViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "TrailerViewController.h"
 #import <QuartzCore/QuartzCore.h>
@@ -73,6 +74,9 @@
     
     TrailerViewController *trailerViewController = [segue destinationViewController];
     trailerViewController.movie = self.movie;
+    
+    TicketsViewController *ticketsViewController = [segue destinationViewController];
+    ticketsViewController.movie = self.movie;
     
 }
 
