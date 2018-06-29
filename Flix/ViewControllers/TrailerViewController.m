@@ -11,6 +11,7 @@
 
 @interface TrailerViewController ()
 @property (weak, nonatomic) IBOutlet WKWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) NSArray *trailers;
 
 @end
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.activityIndicator startAnimating];
     [self fetchTrailers];
 }
 
@@ -59,7 +60,9 @@
                                                      cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                                  timeoutInterval:10.0];
             // Load Request into WebView.
+            
             [self.webView loadRequest:request];
+            [self.activityIndicator stopAnimating];
         }
     }];
     

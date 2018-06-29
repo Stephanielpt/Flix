@@ -73,7 +73,7 @@
     
     TrailerViewController *trailerViewController = [segue destinationViewController];
     trailerViewController.movie = self.movie;
-    NSLog(@"MOVIE BEING PASSED");
+    
 }
 
 
