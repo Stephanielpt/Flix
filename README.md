@@ -1,6 +1,7 @@
 # Project 2 - Flix
 
 Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+On github my master branch might be a bit off because I messed with the branch and github, but if it says master branch then it has the right code  :)
 
 Time spent: 23 hours spent in total
 
@@ -47,13 +48,15 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/rFfJOgX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The favorites list was a truly hard challenge that I was only able to get parts and segments of to work.
+In addition, I struggled with passing information through segues, but once I had to do it gfor the trailers - I felt like I gained a strong understanding of it.
+Finally, learning about the asynchronous aspect of getting data from the API was really interesting!
 
 ## Credits
 
