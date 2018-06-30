@@ -2,7 +2,7 @@
 
 Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 17 hours spent in total
+Time spent: 23 hours spent in total
 
 ## User Stories
 
@@ -18,7 +18,7 @@ The following **optional** features are implemented:
 - [x] User sees an error message when there's a networking error.
 - [x] Movies are displayed using a CollectionView instead of a TableView.
 - [x] User can search for a movie.
-- [ ] All images fade in as they are loading.
+- [x] All images fade in as they are loading.
 - [x] User can view the large movie poster by tapping on a cell.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - [x] Customize the selection effect of the cell.
@@ -28,14 +28,14 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
-- [x] Can be linked to the site for buying movie tickets - given the title has no spaces
-- [x] Can place movies in a favorites list
+- [x] Can be linked to the site for buying movie tickets (even if the title has spaces WOW!!!)
+- [x] Can TRY to save movies (but doesn't fully work)
 - [x] Release date of movie is displayed
-- [ ] Rating is displayed in the detailed movie page!!!!!!
-- [x] Can refresh movie collections in addition to the table view format
-- [x] Can go from search to the detailed movie page
+- [x] Can refresh movie in collection format (in addition to the movies in table view format)
+- [x] Can go from search page to the detailed movies page
 - [x] Can be linked to trailers
-- [x]
+- [x] Can see trailers in detailed movies page
+- [x] Showed popular movies in collection view instead of only superhero movies
 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
