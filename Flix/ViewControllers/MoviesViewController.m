@@ -140,7 +140,7 @@
     //
     cell.posterView.clipsToBounds = YES;
     cell.posterView.layer.borderWidth = 3.0;
-    cell.posterView.layer.borderColor = [UIColor whiteColor].CGColor;
+    cell.posterView.layer.borderColor = [UIColor blackColor].CGColor;
     
     return cell;
 }
