@@ -8,6 +8,7 @@
 
 #import "FavoriteViewController.h"
 #import "FavoriteViewCell.h"
+#import "MoviesViewController.h"
 
 @interface FavoriteViewController () <UITableViewDataSource, UITableViewDelegate>
 //@property (nonatomic, strong) NSArray *faves;
@@ -26,7 +27,7 @@
     
     //self.myArray = [@[] mutableCopy];
     
-    self.myArray = [[NSMutableArray alloc] init];
+//    self.myArray = [[NSMutableArray alloc] init];
     //NSLog(@"%@", self.myArray[0][@"original_title"]);
 }
 
@@ -53,9 +54,10 @@
     FavoriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavoriteViewCell"];
     if(indexPath.row < self.myArray.count)
     {
-        cell.faveLabel.text = self.myArray[indexPath.row][@"original_title"];
+//        [cell.faveLabel.text =
+//         v((AppDelegate *)[[[UIApplication sharedApplication] delegate]).myArray[indexPath.row][@"original_title"];
         NSLog(@"amazing");
-        NSLog(@"%@", self.myArray[indexPath.row][@"original_title"]);
+        //NSLog(@"%@", MoviesViewController.myArray[indexPath.row][@"original_title"]);
     }
     //    NSLog(@"%@", [NSString stringWithFormat: @"row: %d, section: %d", indexPath.row, indexPath.section]);
     

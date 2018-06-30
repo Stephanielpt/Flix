@@ -23,6 +23,10 @@
 
 @implementation MoviesViewController
 
++ (void)setMyArray:(NSMutableArray *)myArray {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.activityIndicator startAnimating];
@@ -35,6 +39,7 @@
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:(UIControlEventValueChanged)];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     
+    MoviesViewController.myArray = [[NSMutableArray alloc] init];
 }
 
     
@@ -98,19 +103,46 @@
     
     NSDictionary *movie = self.movies[indexPath.row];
     cell.titleLabel.text = movie[@"title"];
-    cell.synopsisLabel.text = movie[@"overview"];
+//    cell.synopsisLabel.text = movie[@"overview"];
+    cell.synopsisLabel.text = @"";
+
     [cell.synopsisLabel sizeToFit];
 
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
-    
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-    
+//    NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w500/%@", self.movie[@"poster_path"]];
+    NSURL *url = [NSURL URLWithString:fullPosterURLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//
+    [cell.posterView setImageWithURLRequest:request placeholderImage:nil
+                                    success:^(NSURLRequest *imageRequest, NSHTTPURLResponse *imageResponse, UIImage *image) {
+                                        
+                                        // imageResponse will be nil if the image is cached
+                                        if (imageResponse) {
+                                            NSLog(@"Image was NOT cached, fade in image");
+                                            cell.posterView.alpha = 0.0;
+                                            cell.posterView.image = image;
+                                            
+                                            //Animate UIImageView back to alpha 1 over 0.3sec
+                                            [UIView animateWithDuration:0.5 animations:^{
+                                                 cell.posterView.alpha = 1.0;
+                                            }];
+                                        }
+                                        else {
+                                            NSLog(@"Image was cached so just update the image");
+                                            cell.posterView.image = image;
+                                        }
+                                    }
+                                    failure:^(NSURLRequest *request, NSHTTPURLResponse * response, NSError *error) {
+                                        // do something for the failure condition
+                                    }];
+//    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+//
     //to avoid flickering w slow connection
-    cell.posterView.image = nil;
-    [cell.posterView setImageWithURL:posterURL];
-    
+//    cell.posterView.image = nil;
+//    [cell.posterView setImageWithURL:posterURL];
+//    
     cell.posterView.clipsToBounds = YES;
     cell.posterView.layer.borderWidth = 3.0;
     cell.posterView.layer.borderColor = [UIColor whiteColor].CGColor;

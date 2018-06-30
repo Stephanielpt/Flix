@@ -12,6 +12,8 @@
 #import "TrailerViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "FavoriteViewController.h"
+#import "MoviesViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
@@ -78,7 +80,8 @@
     {
         FavoriteViewController *favoriteViewController = [segue destinationViewController];
         //favoriteViewController.myArray = self.movie;
-        [favoriteViewController.myArray addObject:self.movie];
+        AppDelegate *appDelegate;
+        [(appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate]).myArray addObject:self.movie];
     }
     if([segue.identifier isEqualToString:(@"trailer")])
     {

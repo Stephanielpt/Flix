@@ -10,4 +10,6 @@
 
 @interface MoviesViewController : UIViewController
 
+//
+//MoviesViewController.myArray = lsfdkjl
 @end
