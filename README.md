@@ -40,8 +40,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I really wanted to make a page for favorite movies (like a "to-see list) - but editing and displaying an array of movies was really hard
+2. I think that looking into design is something I definitely want to explore because even when i do customize UI - i feel like i make it look worse than before lol
 
 ## Video Walkthrough
 
