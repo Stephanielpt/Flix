@@ -35,6 +35,7 @@ The following **additional** features are implemented:
 - [x] Can refresh movie collections in addition to the table view format
 - [x] Can go from search to the detailed movie page
 - [x] Can be linked to trailers
+- [x]
 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
